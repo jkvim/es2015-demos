@@ -20,7 +20,7 @@
     "url": ""
   },
   "license": "MIT",
-  "dependencies": { },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
@@ -35,10 +35,9 @@
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.2.2",
     "html-webpack-plugin": "^2.24.1",
+    "jest": "^20.0.4",
     "node-sass": "^3.10.1",
-    "open-browser-webpack-plugin": "0.0.2",
     "raw-loader": "^0.5.1",
-    "react-hot-loader": "^3.0.0-beta.4",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^2.6.1",
