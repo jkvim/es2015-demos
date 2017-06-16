@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
-    "mock": "node-dev ./mock_server/server.js"
+    "mock": "node-dev ./mock_server/server.js",
+    "server":"json-server --watch db.json"
   },
   "keywords": [
     "webpack",
