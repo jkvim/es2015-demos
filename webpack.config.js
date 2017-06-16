@@ -42,5 +42,6 @@ module.exports = {
                 loader: 'raw-loader'
             }]
         }],
-    }
+    },
+    devtool: 'source-map'
 };
