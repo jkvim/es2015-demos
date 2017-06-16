@@ -5,7 +5,11 @@
         <title>ES2015 Demos</title>
     </head>
     <body>
-        <h1>ES2015 Demos</h1>
-        <div id="root"></div>
+        <iframe name="form"></iframe>
+        <form action="http://localhost:3000/form" method="post" target="form">
+            name: <input type="text" name="name"/>
+            email: <input type="email" name="email" />
+            <input type="submit" value="提交">
+        </form>
     </body>
 </html>
