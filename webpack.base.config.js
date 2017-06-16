@@ -15,6 +15,7 @@ const environment = JSON.stringify(process.env.environment);
 const openSourceMap = 'producttion' === environment ? false : true;
 
 console.log('---------------------------' + environment + '----------------------------');
+
 module.exports = {
     entry: {
         app: absolutePath('./index.js'),
@@ -35,7 +36,10 @@ module.exports = {
         }),
         new webpack.EnvironmentPlugin({
             NODE_ENV: environment
-        })
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            names: ['vendor'],
+        }),
     ],
     module: {
         rules: [{
@@ -93,5 +97,6 @@ module.exports = {
                 loader: 'file-loader'
             }]
         }],
-    }
+    },
+    stats: 'errors-only'
 };
