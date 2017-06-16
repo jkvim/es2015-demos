@@ -28,6 +28,14 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
             },
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
         ],
     },
 };
