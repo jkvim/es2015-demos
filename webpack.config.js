@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const absolutePath = (relativePath) => {
     return path.resolve(__dirname, relativePath);
@@ -27,19 +28,23 @@ module.exports = {
             template: './template.html',
             filename: 'index.html'
         }),
+        new ExtractTextPlugin({
+            filename: '[name].css'
+        }),
     ],
     module: {
         rules: [{
             test: /\.scss$/,
-            use: [{
-                loader: 'style-loader'
-            }, {
-                loader: 'css-loader'
-            }, {
-                loader: 'sass-loader'
-            }, {
-                loader: 'postcss-loader'
-            }]
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: [{
+                    loader: 'css-loader'
+                }, {
+                    loader: 'postcss-loader'
+                }, {
+                    loader: 'sass-loader'
+                }]
+            })
         }, {
             test: /\.html$/,
             use: [{
@@ -47,16 +52,17 @@ module.exports = {
             }]
         }, {
             test: /\.font\.js$/,
-            use: [{
-                loader: 'style-loader'
-            }, {
-                loader: 'css-loader'
-            }, {
-                loader: 'fontgen-loader',
-                options: {
-                    embed: true,
-                }
-            }]
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: [{
+                    loader: 'css-loader'
+                }, {
+                    loader: 'fontgen-loader',
+                    options: {
+                        embed: true,
+                    }
+                }]
+            })
         }, {
             test: /\.js$/,
             use: [{
@@ -72,12 +78,9 @@ module.exports = {
             }]
         }, {
             test: /\.(eot|ttf|woff|svg)$/,
-            use: [
-                {
-                    loader: 'url-loader'
-                }, {
-                    loader: 'file-loader'
-                }]
+            use: [{
+                loader: 'file-loader'
+            }]
         }],
     },
     devtool: 'source-map'
