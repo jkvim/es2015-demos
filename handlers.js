@@ -1,3 +1,3 @@
-export default ()=>{
-    alert('真的弹出来了...');
+export default () => {
+    alert([1, 2, 3, 4, 5].includes(100));
 };
