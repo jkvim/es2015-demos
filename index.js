@@ -1,5 +1,6 @@
 import './template.html';
 import './index.css';
+import 'babel-polyfill';
 import handleClick from './handlers';
 
 const rootDom = document.querySelector('#root');
