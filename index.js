@@ -7,6 +7,8 @@ if(a % 2 === 0){
 
 console.log('out:', result)
 
+
+
 // for(var i=0; i<10; i++){
 // 	console.log('i:',i)
 // }
@@ -22,3 +24,10 @@ console.log('out:', result)
 // inScopeOfFunction()
 //
 // console.log('out of function a:',a)
+// var outSideObj={}
+// (function(){
+// 	console.log('in function Expression')
+// });
+// (function(obj){
+// 	obj.name='inner'
+// })(outSideObj)

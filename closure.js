@@ -1,25 +1,17 @@
+var delegate
 function closure(){
 	var obj = { name:'jacky' }
 	var func = function(){
 		return obj
 	}
 
-	return func
+	delegate = func
 }
 
-var obj1 = closure()()
+closure()
+var obj1 = delegate()
 obj1.id = 1
 console.log('obj1:',obj1)
 
-var obj2 = closure()()
+var obj2 = delegate()
 console.log('obj2:',obj2)
-
-
-(function(){
-	var obj = { name:'jacky' }
-	var func = function(){
-		return obj
-	}
-
-	return func
-})
