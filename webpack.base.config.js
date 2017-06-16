@@ -2,6 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const packageConfig = require('./package.json');
+
+const vendorList = Object.keys(packageConfig.dependencies);
 
 const absolutePath = (relativePath) => {
     return path.resolve(__dirname, relativePath);
@@ -15,6 +18,7 @@ console.log('---------------------------' + environment + '---------------------
 module.exports = {
     entry: {
         app: absolutePath('./index.js'),
+        vendor: vendorList
     },
     output: {
         filename: '[name].[hash:5].js',
