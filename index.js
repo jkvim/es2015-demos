@@ -1,5 +1,5 @@
 import './template.html';
-import './index.css';
+import './index.scss';
 import 'babel-polyfill';
 import handleClick from './handlers';
 
