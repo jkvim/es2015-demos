@@ -1,3 +1,1 @@
-function haha() {
-    console.log(123);
-}
+document.querySelector('#root').innerText = 'Hello, I\'m from JS.';
