@@ -15,11 +15,18 @@ module.exports = {
         publicPath: "./",
         path: absolutePath('./dist/')
     },
+    devServer: {
+        hot: true,
+        port: 8080,
+        compress: true,
+        publicPath: '/'
+    },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './template.html',
             filename: 'index.html'
-        })
+        }),
     ],
     module: {
         rules: [{
