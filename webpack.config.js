@@ -36,11 +36,11 @@ module.exports = {
             }, {
                 loader: 'css-loader'
             }]
-        },{
+        }, {
             test: /\.html$/,
             use: [{
                 loader: 'raw-loader'
             }]
         }],
-    },
+    }
 };
