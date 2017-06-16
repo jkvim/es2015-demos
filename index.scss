@@ -1,4 +1,15 @@
-div {
-    font-size: 22px;
-    color: #4488EE;
+.hero-list {
+    width: 180px;
+    padding: 0;
+
+    li {
+        list-style: none;
+        line-height: 20px;
+        background: white;
+        text-align: center;
+    }
+
+    li:nth-child(odd) {
+        background: #EEE;
+    }
 }
