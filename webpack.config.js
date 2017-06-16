@@ -33,6 +33,13 @@ module.exports = {
         }),
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor'],
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            mangle: false,
+            comments: false,
+            compress: {
+                warnings: false
+            }
         })
     ],
     module: {
