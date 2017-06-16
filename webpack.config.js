@@ -12,7 +12,7 @@ module.exports = {
         app: absolutePath('./index.js'),
     },
     output: {
-        filename: '[name].js',
+        filename: '[name].[hash:5].js',
         publicPath: "./",
         path: absolutePath('./dist/')
     },
@@ -31,6 +31,9 @@ module.exports = {
         new ExtractTextPlugin({
             filename: '[name].css'
         }),
+        new webpack.optimize.CommonsChunkPlugin({
+            names: ['vendor'],
+        })
     ],
     module: {
         rules: [{
@@ -38,7 +41,10 @@ module.exports = {
             use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
                 use: [{
-                    loader: 'css-loader'
+                    loader: 'css-loader',
+                    options: {
+                        sourceMap: true
+                    }
                 }, {
                     loader: 'postcss-loader'
                 }, {
@@ -55,7 +61,10 @@ module.exports = {
             use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
                 use: [{
-                    loader: 'css-loader'
+                    loader: 'css-loader',
+                    options: {
+                        sourceMap: true
+                    }
                 }, {
                     loader: 'fontgen-loader',
                     options: {
