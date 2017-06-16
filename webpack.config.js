@@ -11,11 +11,9 @@ module.exports = {
     },
     devServer: {
         port: 8080,
-        hot: true,
         compress: true,
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new HTMLWebpackPlugin({
             filename: './index.html',
             template: './index.html',
