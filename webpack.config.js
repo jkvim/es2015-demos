@@ -44,6 +44,18 @@ module.exports = {
                 loader: 'raw-loader'
             }]
         }, {
+            test: /\.font\.js$/,
+            use: [{
+                loader: 'style-loader'
+            }, {
+                loader: 'css-loader'
+            }, {
+                loader: 'fontgen-loader',
+                options: {
+                    embed: true,
+                }
+            }]
+        }, {
             test: /\.js$/,
             use: [{
                 loader: 'babel-loader'
@@ -56,6 +68,14 @@ module.exports = {
                     limit: 10240
                 }
             }]
+        }, {
+            test: /\.(eot|ttf|woff|svg)$/,
+            use: [
+                {
+                    loader: 'url-loader'
+                }, {
+                    loader: 'file-loader'
+                }]
         }],
     },
     devtool: 'source-map'

@@ -32,6 +32,7 @@
         "babel-preset-stage-1": "^6.24.1",
         "css-loader": "^0.28.4",
         "file-loader": "^0.11.2",
+        "fontgen-loader": "^0.2.1",
         "html-webpack-plugin": "^2.28.0",
         "node-sass": "^4.5.3",
         "raw-loader": "^0.5.1",
