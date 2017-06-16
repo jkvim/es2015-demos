@@ -7,9 +7,8 @@ module.exports = {
         app: path.resolve(__dirname, 'index.js'),
     },
     output: {
-        filename: '[name].js',
+        filename: '[name]-[hash].js',
     },
-    devtool: '#source-map',
     devServer: {
         port: 8080,
         hot: true,
