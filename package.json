@@ -9,8 +9,8 @@
     },
     "scripts": {
         "prebuild": "rm -rf dist/",
-        "build": "webpack --config webpack.config.js",
-        "start": "webpack-dev-server --config webpack.config.js"
+        "build": "environment=production webpack --config webpack.production.config.js",
+        "start": "environment=development webpack-dev-server --config webpack.development.config.js"
     },
     "keywords": [
         "webpack"
