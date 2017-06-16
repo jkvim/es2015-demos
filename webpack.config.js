@@ -37,6 +37,8 @@ module.exports = {
                 loader: 'css-loader'
             }, {
                 loader: 'sass-loader'
+            }, {
+                loader: 'postcss-loader'
             }]
         }, {
             test: /\.html$/,
