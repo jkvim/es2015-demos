@@ -1,1 +1,2 @@
-console.log('index.js loaded')
+import commonjs from './common'
+console.log('commonjs module obj:', commonjs)
