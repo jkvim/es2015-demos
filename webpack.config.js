@@ -41,6 +41,11 @@ module.exports = {
             use: [{
                 loader: 'raw-loader'
             }]
+        }, {
+            test: /\.js$/,
+            use: [{
+                loader: 'babel-loader'
+            }]
         }],
     },
     devtool: 'source-map'
