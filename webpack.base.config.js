@@ -12,7 +12,7 @@ const absolutePath = (relativePath) => {
 
 const environment = JSON.stringify(process.env.environment);
 
-const openSourceMap = 'producttion' === environment ? false : true;
+const openSourceMap = 'production' === environment ? false : true;
 
 console.log('---------------------------' + environment + '----------------------------');
 
