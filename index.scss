@@ -2,7 +2,7 @@
 
 body {
     font-size: 24px;
-    line-height: 100%;
+    line-height: 30px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     * {
         margin: 0;
@@ -22,5 +22,10 @@ body {
         & > * {
             vertical-align: middle;
         }
+    }
+    .tips {
+        padding: 10px 0;
+        color: #FFFFFF;
+        background-color: #2070DC;
     }
 }

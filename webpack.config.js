@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const absolutePath = (relativePath) => {
     return path.resolve(__dirname, relativePath);
@@ -26,20 +27,27 @@ module.exports = {
             template: './index.html',
             filename: 'index.html'
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new ExtractTextPlugin({
+            filename: '[name].css'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            names: ['vendor']
+        })
     ],
     module: {
         rules: [{
             test: /\.scss$/,
-            use: [{
-                loader: 'style-loader'
-            }, {
-                loader: 'css-loader'
-            }, {
-                loader: 'postcss-loader'
-            }, {
-                loader: 'sass-loader'
-            }]
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: [{
+                    loader: 'css-loader'
+                }, {
+                    loader: 'postcss-loader'
+                }, {
+                    loader: 'sass-loader'
+                }]
+            })
         }, {
             test: /\.js$/,
             use: [{
