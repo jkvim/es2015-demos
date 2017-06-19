@@ -5,7 +5,7 @@ const postcssConfig = {
         })
     ]
 };
-if (true || 'production' === process.env.environment) {
+if ('production' === process.env.environment) {
     postcssConfig.plugins.push(
         require('cssnano')({
             preset: ['default', {
