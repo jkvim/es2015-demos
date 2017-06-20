@@ -14,9 +14,9 @@ module.exports = {
         app: absolutePath('./index.js')
     },
     output: {
+        publicPath: '/',
         filename: '[name].js',
-        path: absolutePath('./dist'),
-        publicPath: '/'
+        path: absolutePath('./dist')
     },
     plugins: [
         new webpack.EnvironmentPlugin({
