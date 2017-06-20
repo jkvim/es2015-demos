@@ -10,7 +10,7 @@
     "scripts": {
         "prebuild": "rm -rf dist",
         "build": "cross-env environment=production webpack --config webpack.production.config.js",
-        "start": "cross-env environment=development webpack-dev-server --config webpack.development.config.js"
+        "start": "cross-env environment=development webpack-dev-server --config webpack.base.config.js --port 8080"
     },
     "keywords": [
         "webpack"
