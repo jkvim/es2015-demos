@@ -14,6 +14,12 @@ class CommentInput extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        if (this.textarea) {
+            this.textarea.focus();
+        }
+    }
+    
     handleNameChange(event) {
         this.setState({
             username: event.target.value
@@ -49,7 +55,11 @@ class CommentInput extends Component {
                 </div>
                 <div className={style.fieldset}>
                     <label> 评论内容: </label>
-                    <textarea value={this.state.content} onChange={this.handleContentChange} />
+                    <textarea
+                        value={this.state.content}
+                        onChange={this.handleContentChange}
+                        ref={textarea => { this.textarea = textarea }}
+                    />
                 </div>
                 <button type="submit">发布</button>
             </form>
