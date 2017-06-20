@@ -20,9 +20,6 @@
         "url": ""
     },
     "license": "MIT",
-    "dependencies": {
-        "babel-polyfill": "^6.23.0"
-    },
     "devDependencies": {
         "webpack": "^2.6.1",
         "webpack-dev-server": "^2.4.5"
