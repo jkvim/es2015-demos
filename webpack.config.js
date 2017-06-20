@@ -1,36 +1,17 @@
 const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const absolutePath = (relativePath) => {
-    return path.resolve(__dirname, relativePath);
-};
 
 module.exports = {
     entry: {
-        app: absolutePath('./index.js')
+        publicPath: '/',
+        app: path.resolve(__dirname, './index.js')
     },
     output: {
         filename: '[name].js'
     },
-    devServer: {
-        hot: true,
-        port: 8080,
-        inline: true,
-        host: '0.0.0.0',
-        compress: true,
-        publicPath: '/'
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './index.html',
-            filename: 'index.html'
-        }),
-        new webpack.HotModuleReplacementPlugin()
-    ],
     module: {
         rules: [{
             test: /\.scss$/,
+            exclude: /node_modules/,
             use: [{
                 loader: 'style-loader'
             }, {
@@ -42,11 +23,13 @@ module.exports = {
             }]
         }, {
             test: /\.js$/,
+            exclude: /node_modules/,
             use: [{
                 loader: 'babel-loader'
             }]
         }, {
             test: /\.(jpg|png|gif)$/,
+            exclude: /node_modules/,
             use: [{
                 loader: 'url-loader',
                 options: {
@@ -55,6 +38,7 @@ module.exports = {
             }]
         }, {
             test: /\.(eot|svg|ttf|woff)$/,
+            exclude: /node_modules/,
             use: [{
                 loader: 'file-loader'
             }]
