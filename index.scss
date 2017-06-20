@@ -28,4 +28,26 @@ body {
         color: #FFFFFF;
         background-color: #2070DC;
     }
+    label {
+        display: block;
+        margin-top: 10px;
+        & > * {
+            vertical-align: middle;
+        }
+        #calculate {
+            width: 240px;
+            height: 22px;
+            line-height: 22px;
+            font-size: 16px;
+            padding: 3px 8px;
+            outline: 0 none;
+            border: 1px solid #E5E5E5;
+            transition: all 0.5s;
+            border-radius: 4px;
+            &:focus {
+                border-color: #2070DC;
+                box-shadow: 0 0 3px #2070DC;
+            }
+        }
+    }
 }

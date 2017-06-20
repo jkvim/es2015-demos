@@ -3,19 +3,16 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const absolutePath = (relativePath) => {
-    return path.resolve(__dirname, relativePath);
-};
-
 console.log('---------------------' + process.env.environment + '-------------------');
 
 module.exports = {
     entry: {
-        app: absolutePath('./index.js')
+        app: path.resolve(__dirname, './index.js')
     },
     output: {
         filename: '[name].js',
-        path: absolutePath('./dist')
+        path: path.resolve(__dirname, './dist'),
+        publicPath: '/'
     },
     plugins: [
         new webpack.EnvironmentPlugin({
