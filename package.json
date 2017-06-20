@@ -8,7 +8,7 @@
         "url": ""
     },
     "scripts": {
-        "start": "webpack-dev-server --config webpack.config.js"
+        "start": "webpack-dev-server --config webpack.config.js --port 8080"
     },
     "keywords": [
         "webpack"
