@@ -12,6 +12,11 @@ class CommentInput extends Component {
         this.handleContentChange = this.handleContentChange.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleNameInputBlur = this.handleNameInputBlur.bind(this);
+    }
+
+    componentWillMount() {
+        this.getUserName();
     }
 
     componentDidMount() {
@@ -46,6 +51,21 @@ class CommentInput extends Component {
         })
     }
 
+    handleNameInputBlur() {
+        this.saveUserName();
+    }
+
+    saveUserName() {
+        localStorage.setItem('username', this.state.username);
+    }
+
+    getUserName() {
+        const username = localStorage.getItem('username');
+        this.setState({
+            username
+        });
+    }
+
     render() {
         return (
             <form onSubmit={this.handleSubmit} className={style.form}>
@@ -53,6 +73,7 @@ class CommentInput extends Component {
                     <label> 用户名: </label>
                     <input
                         onChange={this.handleNameChange}
+                        onBlur={this.handleNameInputBlur}
                         value={this.state.username}
                     />
                 </div>
