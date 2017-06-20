@@ -1,15 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import style from './index.scss'
 
 const Button = ({ text }) => {
-    const style = {
-        background: 'deepskyblue',
-        fontSize: '24px',
-        color: 'white',
-        padding: '5px 10px'
-    };
     return (
-        <button style={style}>{text}</button>
+        <button className={style.button}>{text}</button>
     );
 }
 
