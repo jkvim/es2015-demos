@@ -12,21 +12,11 @@ module.exports = {
         rules: [{
             test: /\.scss$/,
             exclude: /node_modules/,
-            use: [{
-                loader: 'style-loader'
-            }, {
-                loader: 'css-loader'
-            }, {
-                loader: 'postcss-loader'
-            }, {
-                loader: 'sass-loader'
-            }]
+            use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
         }, {
             test: /\.js$/,
             exclude: /node_modules/,
-            use: [{
-                loader: 'babel-loader'
-            }]
+            use: ['babel-loader']
         }]
     }
 };
