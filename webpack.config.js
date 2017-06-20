@@ -5,7 +5,6 @@ module.exports = {
         app: path.resolve(__dirname, './index.js')
     },
     output: {
-        publicPath: '/',
         filename: '[name].js'
     }
 };
