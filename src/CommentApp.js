@@ -3,14 +3,18 @@ import CommentInput from './CommentInput'
 import CommentList from './CommentList'
 
 class CommentApp extends Component {
-  render() {
-    return (
-      <div>
-        <CommentInput />
-        <CommentList />
-      </div>
-    )
-  }
+    handleSubmit(comment) {
+        console.log(comment);
+    }
+
+    render() {
+        return (
+            <div>
+                <CommentInput onSubmit={this.handleSubmit}/>
+                <CommentList />
+            </div>
+        )
+    }
 }
 
 export default CommentApp;
