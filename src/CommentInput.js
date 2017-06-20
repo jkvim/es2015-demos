@@ -51,7 +51,10 @@ class CommentInput extends Component {
             <form onSubmit={this.handleSubmit} className={style.form}>
                 <div className={style.fieldset}>
                     <label> 用户名: </label>
-                    <input onChange={this.handleNameChange} />
+                    <input
+                        onChange={this.handleNameChange}
+                        value={this.state.username}
+                    />
                 </div>
                 <div className={style.fieldset}>
                     <label> 评论内容: </label>
