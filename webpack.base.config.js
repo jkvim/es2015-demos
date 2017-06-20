@@ -10,8 +10,9 @@ module.exports = {
         app: path.resolve(__dirname, './index.js')
     },
     output: {
-        path: path.resolve(__dirname, './dist'),
-        filename: '[name].js'
+        publicPath: '/',
+        filename: '[name].js',
+        path: path.resolve(__dirname, './dist')
     },
     plugins: [
         new webpack.EnvironmentPlugin({
