@@ -22,9 +22,20 @@ class CommentApp extends Component {
     }
 
     handleSubmit(comment) {
-        this.setState({
-            comments: this.state.comments.concat(comment)
-        });
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(comment)
+        };
+
+        fetch('http://localhost:3000/comments', options)
+            .then(() => {
+                this.setState({
+                    comments: this.state.comments.concat(comment)
+                });
+            });
     }
 
     render() {
