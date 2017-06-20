@@ -2,13 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import style from './index.scss'
 
-const Button = ({ text }) => {
+const Button = ({ type, text }) => {
+    const className = type === 'alert' ? style.alertButton : style.mainButton
     return (
-        <button className={style.button}>{text}</button>
+        <button className={`${className} ${style.button}`}>{text}</button>
     );
 }
 
+const MainButton = () => <Button type="submit" text="Submit" />
+const AlertButton = () => <Button type="alert" text="Alert" />
+
 ReactDOM.render(
-    <Button text="Submit"/>,
+    <div>
+        <MainButton />
+        <AlertButton />
+    </div>,
     document.getElementById('root')
 );
