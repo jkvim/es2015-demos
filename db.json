@@ -1,22 +1,27 @@
 {
   "comments": [
     {
+      "id": 1,
       "username": "Lianghui",
       "content": "@Cindy 父组件通过 props 传递数据给子组件，子组件通过 callback 通知父组件。"
     },
-        {
+    {
+      "id": 2,
       "username": "Cindy",
       "content": "怎么跨组件通信?"
     },
-        {
+    {
+      "id": 3,
       "username": "Tony",
       "content": "组件化是什么概念?"
     },
-        {
+    {
+      "id": 4,
       "username": "Lianghui",
       "content": "还不错，挺好用的。"
     },
-        {
+    {
+      "id": 5,
       "username": "PengChuang",
       "content": "React 好用吗？"
     }
