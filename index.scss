@@ -1,11 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    * {
-        margin: 0;
-        padding: 0;
+    padding: 10px;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    h1 {
+        line-height: 60px;
     }
     #root {
         color: #2070DC;
-        margin-top: 20px;
+        margin: 10px 0;
         background: linear-gradient(to right, #FFFFFF, #2070DC);
     }
 }
+
