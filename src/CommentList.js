@@ -3,17 +3,16 @@ import React, { Component } from 'react'
 import Comment from './Comment';
 
 class CommentList extends Component {
-  render() {
-    return (
-        <div>
-            <Comment content="I'm a comment."/>
-            <Comment content="I'm a comment."/>
-            <Comment content="I'm a comment."/>
-            <Comment content="I'm a comment."/>
-            <Comment content="I'm a comment."/>
-        </div>
-    )
-  }
+    render() {
+        const { comments } = this.props
+        return (
+            <div>
+                {comments.map((comment, i) =>
+                    <Comment key={i} {...comment} />
+                )}
+            </div>
+        )
+    }
 }
 
 export default CommentList;
