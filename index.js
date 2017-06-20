@@ -2,17 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import style from './index.scss'
 
-class App extends React.Component {
-    render() {
-        return (
-            <div>
-                Hello World
-            </div>
-        );
-    }
-}
+import CommentApp from './src/CommentApp';
 
 ReactDOM.render(
-    <App />,
+    <CommentApp />,
     document.getElementById('root')
 );
