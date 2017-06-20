@@ -10,9 +10,9 @@ module.exports = {
         app: path.resolve(__dirname, './index.js')
     },
     output: {
+        publicPath: '/',
         filename: '[name].js',
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/'
+        path: path.resolve(__dirname, './dist')
     },
     plugins: [
         new webpack.EnvironmentPlugin({
@@ -24,9 +24,6 @@ module.exports = {
         }),
         new ExtractTextPlugin({
             filename: '[name].css'
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            names: ['vendor']
         })
     ],
     module: {
@@ -34,38 +31,20 @@ module.exports = {
             test: /\.scss$/,
             exclude: /node_modules/,
             use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: [{
-                    loader: 'css-loader'
-                }, {
-                    loader: 'postcss-loader'
-                }, {
-                    loader: 'sass-loader'
-                }]
+                use: ['css-loader', 'postcss-loader', 'sass-loader']
             })
         }, {
             test: /\.js$/,
             exclude: /node_modules/,
-            use: [{
-                loader: 'babel-loader'
-            }, {
-                loader: 'eslint-loader'
-            }]
+            use: ['babel-loader', 'eslint-loader']
         }, {
             test: /\.(jpg|png|gif)$/,
             exclude: /node_modules/,
-            use: [{
-                loader: 'url-loader',
-                options: {
-                    limit: 20480
-                }
-            }]
+            use: ['url-loader']
         }, {
             test: /\.(eot|svg|ttf|woff)$/,
             exclude: /node_modules/,
-            use: [{
-                loader: 'file-loader'
-            }]
+            use: ['file-loader']
         }]
     }
 };
