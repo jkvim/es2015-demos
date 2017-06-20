@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 
 import style from './CommentInput.scss';
 
 class CommentInput extends Component {
+    static propTypes = {
+        onSubmit: PropTypes.func
+    }
     constructor(props) {
         super(props);
         this.state = {

@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 
 import style from './Comment.scss';
 
 class Comment extends Component {
+    static propTypes = {
+        username: PropTypes.string,
+        content: PropTypes.string
+    }
+    
     render() {
         const { username, content } = this.props
         return (
