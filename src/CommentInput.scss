@@ -1,0 +1,25 @@
+.fieldset {
+  display: flex;
+  width: 500px;
+  border: 1px solid #EEE;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  label {
+    align-items: flex-start;
+    flex-basis: 100px;
+  }
+  
+  textarea {
+    height: 100px;
+    align-items: flex-start;
+    flex: 1;
+    outline: none;
+    resize: none;
+    border: 1px solid #E6E6E6;
+  }
+
+  input {
+    flex: 1;
+  }
+}
