@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const Button = ({ text }) => <button>{text}</button>
+
 ReactDOM.render(
-    <h1>Hello, World!</h1>,
+    <Button text="Submit"/>,
     document.getElementById('root')
 );
