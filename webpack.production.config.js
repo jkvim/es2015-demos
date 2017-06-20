@@ -4,13 +4,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 baseConfig.output.publicPath = './';
 baseConfig.plugins.push(
-    new UglifyJSPlugin({
-        mangle: false,
-        comments: false,
-        compress: {
-            warnings: false
-        }
-    })
+    new UglifyJSPlugin()
 );
 
 module.exports = baseConfig;
