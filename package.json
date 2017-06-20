@@ -8,7 +8,7 @@
         "url": ""
     },
     "scripts": {
-        "start": "webpack-dev-server --config webpack.config.js"
+        "start": "webpack-dev-server --config webpack.config.js --port 8080"
     },
     "keywords": [
         "webpack"
@@ -24,7 +24,6 @@
         "babel-polyfill": "^6.23.0"
     },
     "devDependencies": {
-        "html-webpack-plugin": "^2.28.0",
         "webpack": "^2.6.1",
         "webpack-dev-server": "^2.4.5"
     }
