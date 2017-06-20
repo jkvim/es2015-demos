@@ -12,10 +12,18 @@ const Button = ({ type, text }) => {
 const MainButton = () => <Button type="submit" text="Submit" />
 const AlertButton = () => <Button type="alert" text="Alert" />
 
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <MainButton />
+                <AlertButton />
+            </div> 
+        );
+    }
+}
+
 ReactDOM.render(
-    <div>
-        <MainButton />
-        <AlertButton />
-    </div>,
+    <App />,
     document.getElementById('root')
 );
