@@ -8,11 +8,6 @@ class CommentList extends Component {
         comments: PropTypes.arrayOf(Object)
     }
 
-    constructor() {
-        super();
-        console.log('Son Constructor');
-    }
-    
     componentWillMount() {
         console.log('Son componentWillMount');
     }
