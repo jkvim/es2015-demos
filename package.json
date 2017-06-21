@@ -18,7 +18,10 @@
         },
         "transform": {
             "^.+\\.js$": "babel-jest"
-        }
+        },
+        "setupFiles": [
+            "<rootDir>/setup.js"
+        ]
     },
     "keywords": [
         "webpack",
