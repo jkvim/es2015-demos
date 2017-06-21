@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import style from './index.scss'
 
-import CommentApp from './src/CommentApp';
+import Routers from './src/Routers';
 
 ReactDOM.render(
-    <CommentApp />,
+    <Routers />,
     document.getElementById('root')
 );

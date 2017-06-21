@@ -1,6 +1,10 @@
 .wrapper {
-  width: 520px;
-  margin: 100px auto;
-  padding: 10px;
-  background: white;
+    width: 520px;
+    margin: 100px auto;
+    padding: 10px;
+    background: white;
+    .articleName {
+        padding: 10px 0;
+        color: #00A3CF;
+    }
 }

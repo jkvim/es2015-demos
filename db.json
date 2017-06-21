@@ -1,29 +1,51 @@
 {
-  "comments": [
-    {
-      "id": 1,
-      "username": "Lianghui",
-      "content": "@Cindy 父组件通过 props 传递数据给子组件，子组件通过 callback 通知父组件。"
-    },
-    {
-      "id": 2,
-      "username": "Cindy",
-      "content": "怎么跨组件通信?"
-    },
-    {
-      "id": 3,
-      "username": "Tony",
-      "content": "组件化是什么概念?"
-    },
-    {
-      "id": 4,
-      "username": "Lianghui",
-      "content": "还不错，挺好用的。"
-    },
-    {
-      "id": 5,
-      "username": "PengChuang",
-      "content": "React 好用吗？"
-    }
-  ]
+    "comments": [
+        {
+            "id": 1,
+            "username": "Lianghui",
+            "content": "@Cindy 父组件通过 props 传递数据给子组件，子组件通过 callback 通知父组件。"
+        },
+        {
+            "id": 2,
+            "username": "Cindy",
+            "content": "怎么跨组件通信?"
+        },
+        {
+            "id": 3,
+            "username": "Tony",
+            "content": "组件化是什么概念?"
+        },
+        {
+            "id": 4,
+            "username": "Lianghui",
+            "content": "还不错，挺好用的。"
+        },
+        {
+            "id": 5,
+            "username": "PengChuang",
+            "content": "React 好用吗？"
+        }
+    ],
+    "articles": [
+        {
+            "id": 1,
+            "articleName": "React是真的好用么？",
+            "comments": 5
+        },
+        {
+            "id": 2,
+            "articleName": "有谁用过Vue框架么？",
+            "comments": 5
+        },
+        {
+            "id": 3,
+            "articleName": "关于三大框架的一些思考",
+            "comments": 5
+        },
+        {
+            "id": 4,
+            "articleName": "单向数据流VS双向数据流",
+            "comments": 5
+        }
+    ]
 }

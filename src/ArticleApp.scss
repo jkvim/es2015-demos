@@ -1,0 +1,21 @@
+.articles {
+    width: 400px;
+    list-style: none;
+    margin: 0;
+    padding: 0 14px;
+    border: 1px solid #E6E6E6;
+    background-color: #FFFFFF;
+    .item {
+        padding: 6px 10px;
+        border-bottom: 1px solid #E6E6E6;
+        &:last-child{
+            border-bottom: 0 none;
+        }
+        a{
+            color: #00A3CF;
+            font-size: 14px;
+            text-decoration: none;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+    }
+}
