@@ -18,8 +18,7 @@
             "off"
         ],
         "semi": [
-            "error",
-            "always"
+            "off"
         ],
         "no-undef": [
             "off"

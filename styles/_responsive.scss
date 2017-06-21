@@ -1,0 +1,104 @@
+@media (max-width:680px){
+	body{
+		width: 100%;
+	}
+
+	#content{
+		width: 100%;
+	}
+	#contacts{
+		display: none;
+	}
+
+	#content {
+		.subscribe{
+			display: none;
+		}
+
+		.blog{
+			display: none;
+		}
+	}
+
+	footer{
+		display: none;
+	}
+
+	#wrap{
+		flex-direction: column;
+		#menu{
+			height:150px;
+			display: flex;
+
+			nav {
+				ul {
+					display: flex;
+					padding-top: 20px;
+
+					li {
+						// display: block;
+						padding-left: 20px;
+						padding-right: 20px;
+
+						i{
+							position: static;
+							display: block;
+							text-align: center;
+							padding-bottom: 5px;
+						}
+
+						span{
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+		.gallery{
+			width: auto;
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	#content{
+		.gallery{
+			nav {
+				ul {
+					flex-direction: column;
+				}
+			}
+		}
+	}
+
+	#wrap {
+		#menu {
+			flex-direction: column-reverse;
+			width: 100%;
+			align-items: flex-start;
+
+			nav {
+				ul {
+					margin:0;
+					li {
+						padding: 10px;
+						i{
+							display: none;
+						}
+
+						span{
+							font-size: 14px;
+						}
+					}
+				}
+			}
+
+			#logo{
+				align-self: center;
+			}
+		}
+
+
+	}
+}
