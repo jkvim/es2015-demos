@@ -11,9 +11,32 @@ class CommentApp extends Component {
             comments: []
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        console.log('constructor');
+    }
+
+    componentWillMount() {
+        console.log('componentWillMount');
+    }
+
+    componentWillReceiveProps() {
+        console.log(componentWillReceiveProps);
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        console.log('componentWillUpdate');
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log('componentDidUpdate');
+    }
+    
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('shouldComponentUpdate');
+        return true;
     }
 
     componentDidMount() {
+        console.log('componentDidMount')
         fetch('http://localhost:3000/comments')
             .then(response => response.json())
             .then(comments => {
@@ -41,6 +64,7 @@ class CommentApp extends Component {
     }
 
     render() {
+        console.log('render');
         return (
             <div className={style.wrapper}>
                 <CommentInput onSubmit={this.handleSubmit} />
