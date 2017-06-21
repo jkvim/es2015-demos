@@ -6,8 +6,9 @@ class CommentList extends Component {
   render() {
     return (
         <div>
-            <Comment content="I'm a comment." username="Tony" />
-            <Comment content="I'm a comment." username="Sam"/>
+            {this.props.comments.map((comment, i) =>
+                <Comment {...comment} key={i} />
+            )}
         </div>
     )
   }
