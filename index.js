@@ -1,2 +1,2 @@
-import commonjs from './common'
+import commonjs from './commonjs'
 console.log('commonjs module obj:', commonjs)
