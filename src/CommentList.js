@@ -7,8 +7,39 @@ class CommentList extends Component {
     static propTypes = {
         comments: PropTypes.arrayOf(Object)
     }
+
+    constructor() {
+        super();
+        console.log('Son Constructor');
+    }
     
+    componentWillMount() {
+        console.log('Son componentWillMount');
+    }
+
+    componentDidMount() {
+        console.log('Son componentDidMount');
+    }
+
+    componentWillReceiveProps() {
+        console.log('Son componentWillReceiveProps');
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('Son shouldComponentUpdate');
+        return true;
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        console.log('Son componentWillUpdate');
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log('Son componentDidUpdate');
+    }
+
     render() {
+        console.log('Son render');
         const { comments } = this.props
         return (
             <div>

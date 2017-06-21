@@ -11,11 +11,11 @@ class CommentApp extends Component {
             comments: []
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        console.log('constructor');
+        console.log('Parent constructor');
     }
 
     componentWillMount() {
-        console.log('componentWillMount');
+        console.log('Parent componentWillMount');
     }
 
     componentWillReceiveProps() {
@@ -23,20 +23,20 @@ class CommentApp extends Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        console.log('componentWillUpdate');
+        console.log('Parent componentWillUpdate');
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log('componentDidUpdate');
+        console.log('Parent componentDidUpdate');
     }
     
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('shouldComponentUpdate');
+        console.log('Parent shouldComponentUpdate');
         return true;
     }
 
     componentDidMount() {
-        console.log('componentDidMount')
+        console.log('Parent componentDidMount')
         fetch('http://localhost:3000/comments')
             .then(response => response.json())
             .then(comments => {
@@ -64,7 +64,7 @@ class CommentApp extends Component {
     }
 
     render() {
-        console.log('render');
+        console.log('Parent render');
         return (
             <div className={style.wrapper}>
                 <CommentInput onSubmit={this.handleSubmit} />
