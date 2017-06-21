@@ -9,7 +9,11 @@ exports[`<Comment /> snapshot should render correctly 1`] = `
   >
     XiaoMing
   </p>
-  :
+  <p
+    className="divider"
+  >
+    :
+  </p>
   <p
     className="content"
   >
