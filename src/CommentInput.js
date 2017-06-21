@@ -16,11 +16,6 @@ class CommentInput extends Component {
         this.handleContentChange = this.handleContentChange.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleNameInputBlur = this.handleNameInputBlur.bind(this);
-    }
-
-    componentWillMount() {
-        this.getUserName();
     }
 
     componentDidMount() {
@@ -53,21 +48,6 @@ class CommentInput extends Component {
         this.setState({
             content: ''
         })
-    }
-
-    handleNameInputBlur() {
-        this.saveUserName();
-    }
-
-    saveUserName() {
-        localStorage.setItem('username', this.state.username);
-    }
-
-    getUserName() {
-        const username = localStorage.getItem('username');
-        this.setState({
-            username
-        });
     }
 
     render() {
