@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import CommentInput from './CommentInput'
 import CommentList from './CommentList'
 
+import style from './CommentApp.scss';
+
 class CommentApp extends Component {
     constructor(props) {
         super(props);
@@ -40,7 +42,7 @@ class CommentApp extends Component {
 
     render() {
         return (
-            <div>
+            <div className={style.wrapper}>
                 <CommentInput onSubmit={this.handleSubmit} />
                 <CommentList comments={this.state.comments} />
             </div>

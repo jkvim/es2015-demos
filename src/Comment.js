@@ -13,7 +13,8 @@ class Comment extends Component {
         const { username, content } = this.props
         return (
             <div className={style.comment}>
-                <p className={style.username}>{username}</p>:
+                <p className={style.username}>{username}</p>
+                <p className={style.divider}>:</p>
                 <p className={style.content}>{content}</p>
             </div>
         )

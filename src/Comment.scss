@@ -1,11 +1,18 @@
 .comment {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   border-bottom: 1px solid #EEE;
+
+  p {
+      padding: 5px;
+  }
+
+  .divider {
+    padding-left: 0;
+  }
 }
 
 .username {
   color: #00a3cf;
-  padding: 5px;
   font-style: italic;
 }
