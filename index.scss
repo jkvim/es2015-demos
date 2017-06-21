@@ -1,58 +1,22 @@
-@import "./fontStyle.css";
+html, body, div, h1, h2, h3, h4, h5, ul, li, p, section,
+nav, footer, header, article, img {
+  box-sizing: border-box;
+}
 
-* {
-    margin: 0;
-    padding: 0;
+ul, li {
+  list-style: none;
 }
 
 body {
-    padding: 10px;
-    font-size: 24px;
-    line-height: 30px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    h1 {
-        line-height: 60px;
-    }
-    #root {
-        color: #2070DC;
-        margin: 10px 0;
-        background: linear-gradient(to right, #FFFFFF, #2070DC);
-    }
-    .background {
-        padding: 30px 0;
-        background: url("./background.jpg");
-    }
-    .fontIcon {
-        padding: 10px 0;
-        i, span {
-            vertical-align: middle;
-        }
-    }
-    .tips {
-        padding: 10px 0;
-        color: #689EE7;
-    }
-    label {
-        display: block;
-        margin-top: 10px;
-        .result {
-            vertical-align: middle;
-        }
-        #calculate {
-            width: 240px;
-            height: 22px;
-            line-height: 22px;
-            font-size: 16px;
-            padding: 3px 8px;
-            outline: 0 none;
-            border: 1px solid #E5E5E5;
-            transition: all 0.5s;
-            border-radius: 4px;
-            vertical-align: middle;
-            &:focus {
-                border-color: #2070DC;
-                box-shadow: 0 0 3px #2070DC;
-            }
-        }
-    }
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px;
 }
+
+[class^="icon"] {
+  font-family: "iconfont";
+  font-style: normal;
+}
+
+@import './styles/app';

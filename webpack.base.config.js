@@ -41,6 +41,10 @@ module.exports = {
         }, {
             test: /\.(eot|svg|ttf|woff)$/,
             use: ['file-loader']
-        }]
+        },   {
+        test: /\.font\.js$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'fontgen-loader?embed=true']
+        },
+      ]
     }
 };

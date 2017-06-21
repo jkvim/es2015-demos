@@ -1,4 +1,5 @@
 import 'babel-polyfill';
+import './icon.font.js';
 import './index.scss';
 import { square } from './calculate';
 

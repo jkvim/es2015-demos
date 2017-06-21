@@ -1,27 +1,138 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Webpack Demos</title>
-    </head>
-    <body>
-        <h1>Webpack Config Demos.</h1>
-        <p id="root"></p>
-        <p class="background">
-            我的背景是一些重复的花纹...
-        </p>
-        <p class="fontIcon">
-            <i class="icon-camera"></i>
-            <span>请给右边的帅哥拍个照</span>
-            <i class="icon-cool"></i>
-        </p>
-        <p class="tips">快看控制台的network面板，有不有发现样式都被提取到app.css了...</p>
-        <p class="tips">有木有发现HTML页面里面不需要手动引用JS文件了...</p>
-        <p class="tips">现在可以用npm build把我打包起来带走了...</p>
-        <p class="tips">有不有发现如果代码缺少分号会报错...</p>
-        <label for="calculate">
-            <input type="text" id="calculate" placeholder="输入数字计算出该数字的平方数"/>
-            <span class="result">计算结果: <span id="calculateResult"></span></span>
-        </label>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 Training Demos</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <section id="menu">
+        <div id="logo">
+          <img src="./assets/images/logo.png" alt="logo">
+        </div>
+        <nav>
+          <ul>
+            <li><i class="icon-spoon-knife"></i><span>TasteMaker</span></li>
+            <li><i class="icon-book"></i><span>Blog</span></li>
+            <li><i class="icon-clipboard"></i><span>The A-List</span></li>
+            <li><i class="icon-camera"></i><span>Contribute</span></li>
+            <li><i class="icon-contract"></i><span>About</span></li>
+          </ul>
+        </nav>
+        <div id="contacts">
+          <div class="contact-item">
+            <h1>latest tweet</h1>
+            <button>Join the Conversation</button>
+          </div>
+          <div class="contact-item">
+            <h1>latest tweet</h1>
+            <p>Dolor commodo do laborum elit laborum veniam et ea reprehenderit enim culpa pariatur fugiat velit.</p>
+            <button>Join the Conversation</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="content">
+        <div class="gallery">
+          <input type="radio" name="slides" id="radio-1" checked>
+          <input type="radio" name="slides" id="radio-2">
+          <input type="radio" name="slides" id="radio-3">
+          <input type="radio" name="slides" id="radio-4">
+          <div class="slides">
+            <img src="./assets/images/food1.png" alt="food">
+            <img src="./assets/images/food2.png" alt="food">
+            <img src="./assets/images/food3.png" alt="food">
+            <img src="./assets/images/food4.png" alt="food">
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <label for="radio-1" id="labelForRadio-1">TasteMaker</label>
+              </li>
+              <li>
+                <label for="radio-2" id="labelForRadio-2">Blog</label>
+              </li>
+              <li>
+                <label for="radio-3" id="labelForRadio-3">The A-List</label>
+              </li>
+              <li>
+                <label for="radio-4" id="labelForRadio-4">Contribute</label>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="subscribe">
+          <i class="icon-mail"></i>
+          <p class="tip">Voluptate aliqua eu esse liat. ute anim non. Amet enim eiusmod consequat id id esse fugiat cillum et ea. Eiusmod
+            in exercitation nisi ad id aute officia duis velit deserunt id.</p>
+          <form>
+            <input type="email" placeholder="Email">
+            <input type="button" value="Subscribe">
+          </form>
+        </div>
+
+        <div class="blog">
+          <article>
+            <a class="header" href="#">
+              <img src="./assets/images/food2.png" alt="food">
+              <h1>how to make vegetable chips</h1>
+            </a>
+            <p>Duis cupidatat ea nulla incididunt irure ullamco mollit et do ipsum occaecat. Ut occaecat dolor nisi dolore dolore ullamco labore voluptate deserunt commodo. Adipisicing quis sunt nulla deserunt deserunt eiusmod sint consectetur minim. Magna occaecat magna elit est eu exercitation in reprehenderit eu nulla laboris. Ex eiusmod est velit laborum. Consectetur minim eiusmod enim fugiat aliquip. Ut laborum irure laborum nisi est cupidatat adipisicing elit eiusmod.</p>
+            <div class="meta">
+              <time>May 05, 2017 /</time>
+              <a>Read &raquo;</a>
+            </div>
+          </article>
+           <article>
+            <a class="header" href="#">
+              <img src="./assets/images/food3.png" alt="food">
+              <h1>how to make vegetable chips</h1>
+            </a>
+            <p>Duis cupidatat ea nulla incididunt irure ullamco mollit et do ipsum occaecat. Ut occaecat dolor nisi dolore dolore ullamco labore voluptate deserunt commodo. Adipisicing quis sunt nulla deserunt deserunt eiusmod sint consectetur minim. Magna occaecat magna elit est eu exercitation in reprehenderit eu nulla laboris. Ex eiusmod est velit laborum. Consectetur minim eiusmod enim fugiat aliquip. Ut laborum irure laborum nisi est cupidatat adipisicing elit eiusmod.</p>
+            <div class="meta">
+              <time>May 05, 2017 /</time>
+              <a>Read &raquo;</a>
+            </div>
+          </article>
+          <article>
+            <a class="header" href="#">
+              <img src="./assets/images/food1.png" alt="food">
+              <h1>how to make vegetable chips</h1>
+            </a>
+            <p>Duis cupidatat ea nulla incididunt irure ullamco mollit et do ipsum occaecat. Ut occaecat dolor nisi dolore dolore ullamco labore voluptate deserunt commodo. Adipisicing quis sunt nulla deserunt deserunt eiusmod sint consectetur minim. Magna occaecat magna elit est eu exercitation in reprehenderit eu nulla laboris. Ex eiusmod est velit laborum. Consectetur minim eiusmod enim fugiat aliquip. Ut laborum irure laborum nisi est cupidatat adipisicing elit eiusmod.</p>
+            <div class="meta">
+              <time>May 05, 2017 /</time>
+              <a>Read &raquo;</a>
+            </div>
+          </article>
+          <article>
+            <a class="header" href="#">
+              <img src="./assets/images/food5.png" alt="food">
+              <h1>how to make vegetable chips</h1>
+            </a>
+            <p>Duis cupidatat ea nulla incididunt irure ullamco mollit et do ipsum occaecat. Ut occaecat dolor nisi dolore dolore ullamco labore voluptate deserunt commodo. Adipisicing quis sunt nulla deserunt deserunt eiusmod sint consectetur minim. Magna occaecat magna elit est eu exercitation in reprehenderit eu nulla laboris. Ex eiusmod est velit laborum. Consectetur minim eiusmod enim fugiat aliquip. Ut laborum irure laborum nisi est cupidatat adipisicing elit eiusmod.</p>
+            <div class="meta">
+              <time>May 05, 2017 /</time>
+              <a>Read &raquo;</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="left-link">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="right-link">
+        <a href="#"><i class="icon-twitter"></i></a>
+        <a href="#"><i class="icon-facebook"></i></a>
+        <a href="#"><i class="icon-rss"></i></a>
+      </div>
+    </footer>
+    <script src='./app.js'></script>
+  </body>
 </html>
