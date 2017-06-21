@@ -10,7 +10,11 @@ exports[`<CommentList /> Snapshot testing should render correctly 1`] = `
     >
       Tony
     </p>
-    :
+    <p
+      className="divider"
+    >
+      :
+    </p>
     <p
       className="content"
     >
@@ -25,7 +29,11 @@ exports[`<CommentList /> Snapshot testing should render correctly 1`] = `
     >
       John
     </p>
-    :
+    <p
+      className="divider"
+    >
+      :
+    </p>
     <p
       className="content"
     >
