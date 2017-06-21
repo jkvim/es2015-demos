@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CommentList /> Snapshot testing should render correctly 1`] = `
+<div>
+  <div
+    className="comment"
+  >
+    <p
+      className="username"
+    >
+      Tony
+    </p>
+    :
+    <p
+      className="content"
+    >
+      I have a pen, I have an apple
+    </p>
+  </div>
+  <div
+    className="comment"
+  >
+    <p
+      className="username"
+    >
+      John
+    </p>
+    :
+    <p
+      className="content"
+    >
+      I have a pen, I have a pineapple
+    </p>
+  </div>
+</div>
+`;
