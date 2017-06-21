@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Comment /> snapshot should render correctly 1`] = `
+<div
+  className="comment"
+>
+  <p
+    className="username"
+  >
+    XiaoMing
+  </p>
+  :
+  <p
+    className="content"
+  >
+    Hello World
+  </p>
+</div>
+`;
