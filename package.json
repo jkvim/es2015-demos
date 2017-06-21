@@ -10,7 +10,8 @@
     "scripts": {
         "start": "webpack-dev-server --config webpack.config.js --port 8080",
         "server": "json-server --watch db.json",
-        "test": "jest"
+        "test": "jest",
+        "test:coverage": "jest --coverage"
     },
     "jest": {
         "moduleNameMapper": {
